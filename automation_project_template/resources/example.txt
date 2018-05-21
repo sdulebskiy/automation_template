@@ -1,0 +1,13 @@
+*** Settings ***
+Documentation     Example library to demonstrate 
+Library           SSHLibrary    ${EMPTY}    ${EMPTY}
+
+*** Keywords ***
+connect to remote box
+    [Documentation]    Keyword to connect to remote box.
+    Open Connection    @{REMOTE_BOX_CREDENTIAL}[0]    prompt=$
+    Login    @{REMOTE_BOX_CREDENTIAL}[1]    @{REMOTE_BOX_CREDENTIAL}[2]
+
+close connection to remote box
+    [Documentation]    Disconnect from current connection that was set by "connect to remote box" keyword
+    Close Connection

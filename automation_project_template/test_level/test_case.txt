@@ -1,0 +1,7 @@
+*** Settings ***
+Resource          ../project_settings.txt
+
+*** Test Cases ***
+Example Test Case
+    [Documentation]    Here should be description
+    Log    Some message to output to log

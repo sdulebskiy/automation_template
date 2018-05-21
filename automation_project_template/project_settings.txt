@@ -1,0 +1,9 @@
+*** Settings ***
+Resource          ../common/common_settings.txt
+Resource          resources/example.txt
+Library           ExampleLibrary
+
+*** Variables ***
+${PRJ}            ${CURDIR}
+${LIBS}           ${PRJ}/libs
+${RES}            ${PRJ}/resources
